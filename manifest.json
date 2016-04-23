@@ -1,0 +1,26 @@
+{
+  
+	"manifest_version": 2,
+
+  
+	"name": "Diamond Cookies",
+  
+	"description": "This extension makes Mike's life easier by automatically appending a cookie link to a diamond link.",
+  
+	"version": "3.0",
+
+  	"options_page": "options.html",
+	
+	"background":
+	{
+		"persistent": false,
+		"scripts": ["cookieAppend.js"]
+	},
+	
+	"browser_action": 
+	{
+		"default_icon": "diamond.png"
+	},
+  
+	"permissions": [    "tabs", "clipboardWrite", "clipboardRead"]
+}

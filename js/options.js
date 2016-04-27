@@ -2,14 +2,19 @@
 
 $(function() {
 	var sites, rowText;
-	if(localStorage.websites) {sites= JSON.parse(localStorage.websites);}
 	var numSites=1;	 
 	var currentSite;
-	for(var site in sites)
-	{
-		currentSite = sites[site];
-		addRow(currentSite.url, currentSite.cookie, currentSite.regex);
+	if(localStorage.websites) {
+    sites= JSON.parse(localStorage.websites);
+    for(var site in sites)
+    {
+      currentSite = sites[site];
+      addRow(currentSite.url, currentSite.cookie, currentSite.regex);
+    }
 	}
+  else {
+		addRow("", "", "");
+  } 
 
 
 	$('#app-data-container').on('click', '.deleteButton', function() {

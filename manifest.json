@@ -14,7 +14,7 @@
 	"background":
 	{
 		"persistent": false,
-		"scripts": ["cookieAppend.js"]
+		"scripts": ["/js/cookieAppend.js", "/js/bootstrap.min.js"]
 	},
 	
 	"browser_action": 

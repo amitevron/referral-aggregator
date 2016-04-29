@@ -1,10 +1,9 @@
-
-
 $(function() {
 	var sites, rowText;
 	var numSites=1;	 
 	var currentSite;
 	if(localStorage.websites) {
+    console.log("loading sites from localStorage...");
     sites= JSON.parse(localStorage.websites);
     for(var site in sites)
     {
@@ -15,7 +14,6 @@ $(function() {
   else {
 		addRow("", "", "");
   } 
-
 
 	$('#app-data-container').on('click', '.deleteButton', function() {
 		$(this).parent().remove();
@@ -47,7 +45,6 @@ $(function() {
 	};
 
 	function storeData() {
-		var $test = $('#app-data-container');
 		var websites = {};
 		var siteName, siteURL, siteCookie, siteRegex;
 		$('#app-data-container').find(".app-data-row").each(function(i){
@@ -62,10 +59,11 @@ $(function() {
 			};
 		});
 		// console.log(JSON.stringify(websites));
+    //console.log(Object.keys(websites).length);
 		localStorage.websites = JSON.stringify(websites);
+    if(jQuery.isEmptyObject(websites))
+    {
+      localStorage.removeItem('websites');
+    }
 	};
 });
-
-
-
-

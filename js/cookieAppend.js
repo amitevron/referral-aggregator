@@ -28,6 +28,7 @@ function getCurrentSite(tab)
 function getCookie(base, urlpath)
 {
 		var cookiesData = JSON.parse(localStorage["sites"]);
+		//var cookiesData = JSON.parse(localStorage["websites"]);
 		var myURL;//=fullURL;
 		if (cookiesData[base])
 		{

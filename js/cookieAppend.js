@@ -16,19 +16,19 @@ function start(tab)
 function getCurrentSite(tab)
 {
 	var tabURL = tab.url;
-// 	var webSite = tabURL.match(/www.(.*).com\//)[1];
-	var parts=tabURL.split(/(.com\/|.net\/|.org\/)/);  //this is pretty weak because if ".com" appears in the path it'll fuck shit up
+	var parts=tabURL.split(/(.com\/|.net\/|.org\/)/);  
 	var baseURL = parts[0];
 	var urlPath = parts[2];
 	baseURL = baseURL+parts[1];
 	baseURL = baseURL.replace(/.*?:\/\//g, "");
+  //alert("part0: " + parts[0] + "  part1: " + parts[1] + "  part2: " + parts[2]);
  	getCookie(baseURL, urlPath);
 }
 
 function getCookie(base, urlpath)
 {
-		var cookiesData = JSON.parse(localStorage["sites"]);
-		//var cookiesData = JSON.parse(localStorage["websites"]);
+		//var cookiesData = JSON.parse(localStorage["sites"]);
+		var cookiesData = JSON.parse(localStorage["websites"]);
 		var myURL;//=fullURL;
 		if (cookiesData[base])
 		{
@@ -37,6 +37,7 @@ function getCookie(base, urlpath)
 			myURL = myRegex.replace("%s", base);	
 			myURL = myURL.replace("%p", urlpath);
 			myURL = myURL.replace("%c", myCookie);	
+      //alert(myURL);
 			copyToClipboard(myURL);		
 		}
 		else

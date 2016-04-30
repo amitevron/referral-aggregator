@@ -8,7 +8,7 @@ $(function() {
     for(var site in sites)
     {
       currentSite = sites[site];
-      addRow(currentSite.url, currentSite.cookie, currentSite.regex);
+      addRow(site, currentSite.cookie, currentSite.regex);
     }
 	}
   else {
@@ -52,8 +52,7 @@ $(function() {
 			siteURL = $(this).find('[id^=siteURL]').val();
 			siteCookie = $(this).find('[id^=cookie]').val();
 			siteRegex = $(this).find('[id^=regex]').val();
-			websites[siteName] = {
-				url:siteURL,
+			websites[siteURL] = {
 				cookie:siteCookie,
 				regex:siteRegex
 			};

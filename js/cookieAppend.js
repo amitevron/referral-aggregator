@@ -42,7 +42,16 @@ function getCookie(base, urlpath)
 		}
 		else
 		{
-      alert("There is no match for "+base);
+      //alert("There is no match for "+base);
+      var addNow = confirm("There is no match for "+base+". Add it now?");
+      if(addNow)
+      {
+        //add current URL to list of sites with default query string and regex
+        cookiesData = JSON.parse(localStorage["websites"])
+        cookiesData[base] = {cookie:"?", regex:"%s%c%p"}
+        localStorage["websites"] = JSON.stringify(cookiesData) 
+        chrome.runtime.openOptionsPage() 
+      }
 		}
 }
 

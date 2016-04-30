@@ -31,7 +31,7 @@ $(function() {
 							<input id='siteURL"+numSites+"' type='text' class='form-control' value='"+url+"'> \
 						</div> \
 						<div class='col-md-3 app-data-col'> \
-							<label for='cookie"+numSites+"'>Cookie</label> \
+							<label for='cookie"+numSites+"'>Query String</label> \
 							<input id='cookie"+numSites+"' type='text' class='form-control' value='"+cookie+"'> \
 						</div> \
 						<div class='col-md-3 app-data-col'> \

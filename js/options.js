@@ -1,6 +1,6 @@
 $(function() {
 	var sites, rowText;
-	var numSites=1;	 
+	var numSites=1;
 	var currentSite;
 	if(localStorage.websites) {
     console.log("loading sites from localStorage...");
@@ -35,13 +35,16 @@ $(function() {
 							<input id='cookie"+numSites+"' type='text' class='form-control' value='"+cookie+"'> \
 						</div> \
 						<div class='col-md-3 app-data-col'> \
-							<label for='regex"+numSites+"'>Regex</label> \
+							<label for='regex"+numSites+"'>Format</label> <img class='question_img' src='question_mark.png' data-toggle='popover' data-placement='right' data-content='some stuff in here' title='popover on right'>\
 							<input id='regex"+numSites+"' type='text' class='form-control' value='"+regex+"'> \
 						</div> \
 						<div class='deleteButton btn btn-danger col-md-1'>Delete</div> \
 					</div>";
 		$('#app-data-container').append(rowText);
 		numSites++;
+    //$('[data-toggle="tooltip"]').tooltip({"animation":true, "trigger":"click"});
+    $('[data-toggle="popover"]').popover();
+
 	};
 
 	function storeData() {

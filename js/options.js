@@ -35,7 +35,7 @@ $(function() {
 							<input id='cookie"+numSites+"' type='text' class='form-control' value='"+cookie+"'> \
 						</div> \
 						<div class='col-md-3 app-data-col'> \
-							<label for='regex"+numSites+"'>Format</label> <img class='question_img' src='question_mark.png' data-toggle='popover' data-placement='right' data-content='some stuff in here' title='popover on right'>\
+							<label for='regex"+numSites+"'>Format</label> \
 							<input id='regex"+numSites+"' type='text' class='form-control' value='"+regex+"'> \
 						</div> \
 						<div class='deleteButton btn btn-danger col-md-1'>Delete</div> \

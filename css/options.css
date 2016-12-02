@@ -1,0 +1,27 @@
+h1 {
+  background-color:#E9EAEE;
+  border-radius:5px;
+  color:black;
+  width:330px;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding: 10px 10px 10px 10px;
+}
+.app-data-row {
+  background-color:#F4F4F4;
+  margin-top:2px;
+  border-radius:10px;
+}
+.app-data-col {
+  padding-top:6px;
+  padding-bottom:6px;
+}
+.deleteButton {
+  margin-top:20px;
+  margin-left:20px;
+}
+#addRowButton {
+  margin-top:6px;
+}
+.question_img {
+  margin-left:4px;
+}

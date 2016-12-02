@@ -2,6 +2,11 @@ $(function() {
 	var sites, rowText;
 	var numSites=1;
 	var currentSite;
+  //import from previous version if necessary
+  if(localStorage.sites) {
+    localStorage.websites = localStorage.sites;
+    localStorage.removeItem('sites');
+  }
 	if(localStorage.websites) {
     console.log("loading sites from localStorage...");
     sites= JSON.parse(localStorage.websites);

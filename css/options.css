@@ -25,3 +25,8 @@ h1 {
 .question_img {
   margin-left:4px;
 }
+#formatExplanation {
+  position: relative;
+  right: 140px;
+  top: 30px;
+}

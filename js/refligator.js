@@ -1,7 +1,7 @@
 // 1. getCurrentURL
 // 2. look up in table to find addition and append it
 // 3. copy complete URL to clipboard
-// 4. move to gmail tab
+// 4. switch to gmail tab
 // 
 
 // var cookiesData = { "jamesallen": "?a_aid=dmnd1357&chan=x",
@@ -80,44 +80,3 @@ function switchToGmail(tabs)
 
 chrome.browserAction.onClicked.addListener(start);
 
-
-
-
-
-
-
-// 
-//     	
-// function getCurrentURL(tab) {
-// 	alert("here I am!");	
-// 		
-// }
-// 
-// function getWindows(win) {
-//   targetWindow = win;
-//   chrome.tabs.getAllInWindow(targetWindow.id, getTabs);
-// }
-// 
-// function getTabs(tabs) {
-//   tabCount = tabs.length;
-//   // We require all the tab information to be populated.
-//   //chrome.windows.getAll({"populate" : true}, moveTabs);
-// }
-
-
- 	//chrome.tabs.create({'url': chrome.extension.getURL('f.html')}, function(tab) {
-// 	 chrome.tabs.create({'url': "http://www.google.com"}, function(tab){});
-// 	"props": 
-// 	{
-// 		"url": "http://www.google.com"
-// 	},
-	//URL=chrome.runtime.getURL();
-//  	chrome.tabs.create({'url': URL}, getCurrentURL(tab));
- 	
-//  	alert("here I am now!");
-
-
- 	//alerting();
- 	//tabCount = tabs.length;
-	 //chrome.tabs.get(1); 
-	 //var x=chrome.tabs.get(3);

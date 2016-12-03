@@ -1,13 +1,13 @@
 {
 	"manifest_version": 2,
-	"name": "Diamond Cookies",
-	"description": "This extension makes Mike's life easier by automatically appending a cookie link to a diamond link.",
+	"name": "Refligator",
+	"description": "Automatically generates referral link for websites specified by the user and copies the generated link to the clipboard.",
 	"version": "3.0",
   "options_page": "options.html",
 	"background":
 	{
 		"persistent": false,
-		"scripts": ["/js/cookieAppend.js", "/js/bootstrap.min.js"]
+		"scripts": ["/js/refligator.js", "/js/bootstrap.min.js"]
 	},
 	"browser_action": 
 	{

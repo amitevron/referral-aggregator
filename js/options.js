@@ -32,18 +32,18 @@ $(function() {
 	function addRow(url, cookie, regex) {
 		rowText = "<div id='site"+numSites+"' class='row app-data-row'> \
 						<div class='col-md-3 app-data-col'> \
-							<label for='siteURL"+numSites+"'>URL</label> \
+							<label for='siteURL"+numSites+"'>Base URL</label> \
 							<input id='siteURL"+numSites+"' type='text' class='form-control' value='"+url+"'> \
 						</div> \
 						<div class='col-md-3 app-data-col'> \
-							<label for='cookie"+numSites+"'>Query String</label> \
+							<label for='cookie"+numSites+"'>Referral Link</label> \
 							<input id='cookie"+numSites+"' type='text' class='form-control' value='"+cookie+"'> \
 						</div> \
 						<div class='col-md-3 app-data-col'> \
-							<label for='regex"+numSites+"'>Format</label> \
+							<label for='regex"+numSites+"'>Format *</label> \
 							<input id='regex"+numSites+"' type='text' class='form-control' value='"+regex+"'> \
 						</div> \
-						<div class='deleteButton btn btn-danger col-md-1'>Delete</div> \
+						<div class='deleteButton btn btn-danger col-md-2'>Delete</div> \
 					</div>";
 		$('#app-data-container').append(rowText);
 		numSites++;

@@ -17,7 +17,7 @@ $(function() {
     }
 	}
   else {
-		addRow("", "", "");
+		addRow("", "", "%s%p%c");
   } 
 
 	$('#app-data-container').on('click', '.deleteButton', function() {
@@ -26,7 +26,7 @@ $(function() {
 	})
 	.on('keyup', '.form-control', storeData);
 	$('#addRowButton').click(function(){
-		addRow("", "", "");
+		addRow("", "", "%s%p%c");
 	});
 
 	function addRow(url, cookie, regex) {
